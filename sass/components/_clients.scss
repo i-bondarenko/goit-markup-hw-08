@@ -1,0 +1,28 @@
+.clients .section-title {
+    margin-bottom: 50px;
+}
+
+.our-clients {
+    display: flex;
+    & .item {
+    margin-right: 30px;
+    &:nth-child(6n) {
+    margin-right: 0;
+}
+}
+}
+.clients-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    fill: #afb1b8;
+    border: 1px solid rgba(175, 177, 184, 1);
+    border-radius: 4px;
+    transition: fill 250ms var(--timing-function), border 250ms var(--timing-function);
+    &:hover, &:focus {
+    fill: var(--accent-color);
+    border-color: var(--accent-color);
+}
+}

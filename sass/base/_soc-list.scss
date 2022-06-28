@@ -1,0 +1,28 @@
+.soc-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.soc-list__item {
+    margin-right: 10px;
+    &:nth-child(4n) {
+    margin-right: 0;
+}
+}
+
+.soc-list__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: #afb1b8;
+    transition: fill 250ms var(--timing-function), background-color 250ms var(--timing-function);
+    &:hover, &:focus {
+    background-color: var(--accent-color);
+    fill: var(--second-accent-color);
+}
+}
