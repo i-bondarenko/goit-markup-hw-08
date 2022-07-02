@@ -3,7 +3,19 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 50px;
-    & .item:not(:last-child) {
-    margin-right: 8px;
-}
+    @include mobile {
+        gap: 15px 8px;
+        justify-content: flex-start;
+        margin-bottom: 40px;
+    }
+    @include tablet {
+        gap: 8px;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    @include desktop {
+        gap: 8px;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
 }

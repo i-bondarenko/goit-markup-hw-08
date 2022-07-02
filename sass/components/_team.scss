@@ -1,12 +1,15 @@
-.team {
-    padding-top: 94px;
-    padding-bottom: 94px;
+.section.team {
     background-color: var(--team-section-background-color);
 }
 .team__title {
     padding: 0;
     margin: 0;
-    margin-bottom: 50px;
+    @include mobile {
+        margin-bottom: 30px;
+    }
+    @include desktop {
+        margin-bottom: 50px;
+    }
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
@@ -15,16 +18,21 @@
 .card-list {
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
 }
 .card-list__item {
-    margin-right: 30px;
+    width: 100%;
+    @include tablet {
+        width: calc((100% - 30px) / 2);
+    }
+    
+    @include desktop {
+        width: calc((100% - 90px) / 4);
+    }
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     background-color: var(--second-accent-color);
-    &:nth-child(4n) {
-    margin-right: 0;
-}
 }
 .card-list__title {
     margin-top: 30px;

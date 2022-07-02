@@ -1,9 +1,14 @@
 .header {
     display: flex;
+    position: relative;
 }
 .navigation {
     display: flex;
     align-items: center;
+    @media screen and (max-width: 767px) {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
 }
 .name {
     display: block;
@@ -14,6 +19,9 @@
     font-size: 26px;
     line-height: 1.2;
     text-decoration: none;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-right: 88px;
+    }
 }
 .name-studio {
     color: #000000;
@@ -26,6 +34,59 @@
 .site-nav .link:focus,
 .site-nav .link.current {
     color: var(--accent-color);
+}
+.menu-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background-color: #ffffff;
+    &.is-open {
+        display: block;
+    }
+}
+@media screen and (max-width: 767px) {
+    .menu-button {
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        display: inline-flex;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+    }
+    .menu-button .icon-close {
+        display: none;
+    }
+    .menu-button.is-open .icon-close {
+        display: block;
+    }
+    .menu-button.is-open .icon-menu {
+        display: none;
+    }
+    .site-nav,
+    .contacts {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        &.is-open {
+            display: block;
+        }
+    }
+}
+@include tablet {
+    .menu-button {
+        display: none;
+    }
+}
+.site-nav {
+    margin-right: 285px;
 }
 .site-nav .item {
     position: relative;
@@ -62,9 +123,17 @@
 .contacts {
     display: flex;
     letter-spacing: 0.02em;
+    @media screen and (max-width: 1199px) {
+        margin-right: 84px;
+    }
 }
 .contacts {
     margin-left: auto;
+    @media screen and (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
+        padding: 21px 15px 21px 0;
+    }
 }
 .contacts .link {
     display: flex;
@@ -78,6 +147,10 @@
     letter-spacing: 0.02em;
     text-decoration: none;
     transition: color 250ms var(--timing-function);
+    @media screen and (max-width: 1199px) {
+        font-size: 12px;
+        padding: 0;
+    }
     &:hover, &:focus {
     color: var(--accent-color);
 }
@@ -98,4 +171,8 @@
 }
 .contacts .item+.item {
     margin-left: 50px;
+    @media screen and (max-width: 1199px) {
+        margin-left: 0;
+        margin-top: 10px;
+    }
 }

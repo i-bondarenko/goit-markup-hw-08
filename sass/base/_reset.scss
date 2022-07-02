@@ -15,3 +15,13 @@ header {
     background-color: #ffffff;
     border-bottom: 1px solid #ececec;
 }
+button {
+    cursor: pointer;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    // width стоїть тимчасово поки немає адаптивної графіки
+}
