@@ -7,22 +7,55 @@
     padding-bottom: 200px;
     background-color: var(--footer-background-color);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url('../images/banner.jpg');
+        url('../images/header-mob.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     text-align: center;
+    @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url('../images/header-mob-2x.jpg');
+        }
+    @include tablet {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/header-tab.jpg');
+    @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url('../images/header-tab-2x.jpg');
+    }
 }
+    @include desktop {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/header-desk.jpg');
+    @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url('../images/header-desk-2x.jpg');
+    }
+}
+}
+
 .banner-title {
-    width: 696px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    margin-bottom: 30px;
-    color: var(--second-accent-color);
+    width: 360px;
+    margin: 0 auto 30px auto;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.4;
+    font-size: 26px;
+    line-height: 1.62;
     text-align: center;
-    text-transform: uppercase; letter-spacing: 0.06em;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--second-accent-color);
+    @include desktop {
+        width: 696px;
+        font-size: 44px;
+        line-height: 1.4;
+    }
 }
