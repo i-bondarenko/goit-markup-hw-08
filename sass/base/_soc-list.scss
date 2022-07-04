@@ -2,7 +2,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
+    @include desktop {
+        margin-bottom: 30px;
+    }
 }
 
 .soc-list__item {

@@ -20,21 +20,16 @@
     }
     @include desktop {
         display: flex;
-        align-items: baseline;
     }
 }
 .footer-info {
-    // margin-right: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     @media screen and (max-width: 767px) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         margin: 0 auto;
     }
     @include tablet {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
         margin-right: auto;
     }
@@ -45,26 +40,20 @@
 }
 
 .footer-info__logo {
-    // display: block;
-    // margin-bottom: 20px;
-    // margin-right: 0;
+    display: block;
+    margin: 0 auto 20px auto;
     color: var(--accent-color);
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
     line-height: 1.2;
     text-decoration: none;
-    @media screen and (max-width: 767px) {
-        display: block;
-        margin: 0 auto 20px auto;
-    }
     @include tablet {
         display: block;
         margin-bottom: 20px;
     }
     @include desktop {
-        display: block;
-        margin-bottom: 20px;
+        margin-left: 0;
     }
 }
 .footer-info__logo-span {
@@ -75,7 +64,6 @@
 }
 }
 .footer-info__location {
-    // margin-bottom: 9px;
     color: var(--second-accent-color);
     font-style: normal;
     font-size: 14px;
@@ -93,10 +81,6 @@
         margin-left: auto;
         margin-bottom: 60px;
     }
-    // @media screen and (max-width: 1199px) {
-    //     margin-bottom: 60px;
-    // }
-
 }
 .contact-list__item {
     @media screen and (max-width: 767px) {
@@ -105,7 +89,6 @@
 }
 }
 .contact-list__item:not(:last-child) {
-    // margin-bottom: 9px;
     @include mobile {
         margin-bottom: 8px;
     }
@@ -132,9 +115,6 @@
         margin-bottom: 60px;
     }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         margin-left: auto;
         margin-bottom: 0;
     }
@@ -153,8 +133,6 @@
     margin-top: 0;
 }
 .social-list {
-    // display: flex;
-    // flex-wrap: wrap;
     @include mobile {
         display: flex;
     }
@@ -182,36 +160,27 @@
 }
 }
 .subscription {
-    // display: flex;
-    // align-items: flex-end;
-    // margin-left: auto;
+    display: flex;
     @media screen and (max-width: 1199px) {
-        display: flex;
         flex-direction: column;
         align-items: center;
         margin: 0 auto;
     }
     @include desktop {
-        display: flex;
         align-items: flex-end;
         margin-left: auto;
     }
 }
 .subscription__form {
-    // display: flex;
-    // flex-direction: column;
-    // margin-right: 12px;
+    display: flex;
+    flex-direction: column;    
     @media screen and (max-width: 1199px) {
-        display: flex;
-        flex-direction: column;
         align-items: center;
         margin-right: auto;
         margin-left: auto;
         margin-bottom: 20px;
     }
     @include desktop {
-        display: flex;
-        flex-direction: column;
         margin-right: 12px;
     }
 }
@@ -238,7 +207,6 @@
         width: 450px;
     }
 }
-
 .subscription__btn {
     padding: 10px 28px 10px 29px;
     display: flex;

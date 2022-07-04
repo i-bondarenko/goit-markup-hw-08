@@ -1,10 +1,10 @@
 .banner {
-    max-width: 1600px;
-    height: 600px;
+    max-width: 767px;
+    height: 400px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     background-color: var(--footer-background-color);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url('../images/header-mob.jpg');
@@ -20,6 +20,7 @@
             url('../images/header-mob-2x.jpg');
         }
     @include tablet {
+        width: 1199px;
         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url('../images/header-tab.jpg');
     @media (min-device-pixel-ratio: 2),
@@ -31,6 +32,10 @@
     }
 }
     @include desktop {
+        max-width: 1600px;
+        height: 600px;
+        padding-top: 200px;
+        padding-bottom: 200px;
         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url('../images/header-desk.jpg');
     @media (min-device-pixel-ratio: 2),
