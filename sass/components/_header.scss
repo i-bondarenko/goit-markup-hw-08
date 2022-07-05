@@ -1,5 +1,4 @@
 .header {
-    display: flex;
     position: relative;
 }
 .navigation {
@@ -51,7 +50,7 @@
     }
 }
 .menu-button, .menu-button-close {
-    transition: color 250ms --timing-function;
+    transition: color 250ms var(--timing-function);
 }
 .menu-button:hover, .menu-button-close:focus, .menu-button-close:hover,
 .menu-button:focus {
@@ -77,8 +76,14 @@
     }
     @include tablet {
         display: flex;
-        justify-content: space-between;
+        flex-grow: 1;
+        width: 100%;
     }
+}
+.mob-menu-bottom {
+    @include tablet {
+    margin-left: auto;
+}
 }
 .site-nav {
     @include tablet {
@@ -136,20 +141,17 @@
         bottom: -33px;
     }
 }
-
 .contacts {
     display: flex;
     flex-direction: column-reverse;
     margin-bottom: 64px;
     @include tablet {
         flex-direction: column;
-        margin-left: 84px;
         margin-bottom: 0;
         padding-top: 21px;
     }
     @include desktop {
         flex-direction: row;
-        margin-left: 305px;
         margin-bottom: 0;
         padding-top: 0;
     }
@@ -207,6 +209,7 @@
     color: var(--accent-color);
     @include tablet {
         display: flex;
+        align-items: center;
         font-size: 12px;
         line-height: 1.17;
         color: var(--main-text-color);
@@ -225,6 +228,7 @@
     color: var(--main-text-color);
     @include tablet {
         display: flex;
+        align-items: center;
         font-size: 12px;
     }
     @include desktop {

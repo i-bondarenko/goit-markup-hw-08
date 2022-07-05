@@ -13,13 +13,15 @@
 .footer__flex {
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         display: flex;
+        justify-content: space-around;
         align-items: baseline;
-        padding-right: 89px;
-        padding-left: 76px;
+        // padding-right: 89px;
+        // padding-left: 76px;
         margin-bottom: 60px;
     }
     @include desktop {
         display: flex;
+        align-items: baseline;
     }
 }
 .footer-info {
@@ -28,10 +30,11 @@
     justify-content: center;
     @media screen and (max-width: 767px) {
         margin: 0 auto;
+        margin-bottom: 60px;
     }
     @include tablet {
         align-items: center;
-        margin-right: auto;
+        // margin-right: auto;
     }
     @include desktop {
         align-items: start;
@@ -79,7 +82,6 @@
     @media screen and (max-width: 767px) {
         margin-right: auto;
         margin-left: auto;
-        margin-bottom: 60px;
     }
 }
 .contact-list__item {
@@ -115,7 +117,9 @@
         margin-bottom: 60px;
     }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-bottom: 0;
     }
 }
